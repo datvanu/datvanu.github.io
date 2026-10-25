@@ -1,0 +1,35 @@
+/* datvanu – site styles. Light/Dark via prefers-color-scheme, WCAG-AA contrast, visible focus. */
+:root{color-scheme:light dark;--bg:#F7F9FA;--fg:#0F2A3D;--muted:#4A5A67;--line:#D5DEE5;--link:#0F766E;--card:#FFFFFF;--mark:#FFE08A;--mark-fg:#0F2A3D;--focus:#F5B301}
+@media (prefers-color-scheme:dark){:root{--bg:#0B1F2D;--fg:#F7F9FA;--muted:#B8C7D3;--line:#24445A;--link:#5EEAD4;--card:#12293A;--mark:#FFE08A;--mark-fg:#0F2A3D}}
+*{box-sizing:border-box}
+html{font-size:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:1rem/1.6 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--link);text-underline-offset:.15em}
+a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:4px}
+.skip{position:absolute;left:-999px;top:0;background:var(--card);color:var(--fg);padding:8px 12px;z-index:10}
+.skip:focus{left:8px;top:8px}
+.site-header,.site-footer,main{max-width:46rem;margin:0 auto;padding:0 1.25rem}
+.site-header{display:flex;align-items:center;justify-content:space-between;padding-top:1.25rem;padding-bottom:1rem;border-bottom:1px solid var(--line)}
+.brand{display:inline-flex;align-items:center;gap:.6rem;color:var(--fg);font-weight:700;font-size:1.35rem;text-decoration:none;letter-spacing:-.01em}
+.brand img{width:2rem;height:2rem}
+main{padding-top:1.5rem;padding-bottom:3rem}
+h1{font-size:1.75rem;line-height:1.25;margin:1.2em 0 .6em}
+h2{font-size:1.2rem;margin-top:1.8em}
+p,li{max-width:70ch}
+code{background:var(--card);border:1px solid var(--line);padding:0 .3em;border-radius:4px;font-size:.92em}
+mark{background:var(--mark);color:var(--mark-fg);padding:0 .2em}
+.lead{font-size:1.1rem;color:var(--muted)}
+.products{list-style:none;padding:0;display:grid;gap:1rem}
+.products li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1rem 1.2rem}
+.products h3{margin:0 0 .25rem;font-size:1.15rem}
+.products p{margin:.25rem 0}
+.tag{display:inline-block;font-size:.85rem;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:0 .6em}
+.notice{border:2px solid var(--focus);background:var(--card);border-radius:10px;padding:.8rem 1rem}
+/* imported legal documents keep their own markup; only styled here */
+.doc nav{display:flex;gap:.75rem;flex-wrap:wrap;margin:.5rem 0 0}
+.doc nav a{font-weight:600;text-decoration:none;border:2px solid var(--link);border-radius:999px;padding:.15rem .9rem}
+.doc section+section{border-top:1px solid var(--line);margin-top:3rem}
+.doc footer{color:var(--muted);font-size:.9rem;margin-top:3rem}
+.site-footer{border-top:1px solid var(--line);padding-top:1rem;padding-bottom:2rem;color:var(--muted);font-size:.95rem}
+.site-footer ul{list-style:none;padding:0;margin:0;display:flex;gap:1.25rem;flex-wrap:wrap}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
