@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LinkClean – Tracking aus Links entfernen</title>
+<meta name="description" content="LinkClean: Browser-Erweiterung, die Tracking-Parameter aus Links entfernt – lokal im Browser.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="../img/mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
+<header class="site-header"><a class="brand" href="../"><img src="../img/mark.svg" alt="" width="32" height="32">datvanu</a></header>
+<main id="inhalt" class="doc">
+<nav><a href="#de" hreflang="de">Deutsch</a><a href="#en" hreflang="en">English</a></nav>
+<section id="de" lang="de">
+<h1>LinkClean – Tracking aus Links entfernen</h1>
+<p class="lead">Browser-Erweiterung für Chrome und Edge: entfernt Tracking-Parameter wie <code>utm_source</code>, <code>fbclid</code> oder <code>gclid</code> aus Links – lokal im Browser.</p>
+<p class="shot"><img src="img/linkclean-de.png" alt="Popup von LinkClean mit Schalter, „Sauberen Link kopieren“ und „Auf dieser Seite pausieren“" width="608" height="454" loading="lazy"></p>
+<h2>Funktionen</h2>
+<ul><li><strong>Automatisch:</strong> 48 bekannte Tracking-Parameter werden beim Aufruf einer Seite entfernt, bevor sie lädt (über die in Chrome eingebaute Schnittstelle declarativeNetRequest).</li><li><strong>Seitenspezifisch:</strong> zusätzliche Regeln für YouTube, Spotify, Amazon, TikTok, X/Twitter, Facebook, Reddit und eBay.</li><li><strong>Sauberen Link kopieren:</strong> ein Klick kopiert die aktuelle Adresse ohne Tracking. Weiterleitungslinks von Google, Facebook, Instagram, YouTube, LinkedIn und Reddit werden dabei entpackt, sodass das echte Ziel geteilt wird.</li><li><strong>Auf dieser Seite pausieren:</strong> schaltet die automatische Bereinigung für eine Website ab, falls sie ihre Parameter braucht. Anmeldeseiten von Google, Apple und Microsoft sowie Google Docs und Gmail sind standardmäßig ausgenommen.</li><li>Ein/Aus-Schalter, Zähler im Symbol für bereinigte Links im aktuellen Tab, hell/dunkel, Deutsch und Englisch.</li></ul>
+<h2>Datenschutz</h2>
+<p>Kein Konto, keine Statistik, keine Server: Die Erweiterung sendet keine Daten. <a href="datenschutz/">Datenschutzerklärung LinkClean</a></p>
+<h2 id="download">Download</h2>
+<p><a href="linkclean-1.0.0.zip" download>LinkClean 1.0.0 als ZIP herunterladen</a> (17 KB)</p>
+<p>SHA-256: <code class="hash">f06a7aba37417ade7b2c387767ebe8308e9dc1d0185e954c381c55686d6c8bd5</code></p>
+<p>Chrome Web Store: Eintrag folgt.</p>
+<h2>Installation in Chrome oder Edge (entpackte Erweiterung)</h2>
+<ol><li>ZIP herunterladen und in einen dauerhaften Ordner entpacken (z. B. <code>Dokumente/LinkClean</code>). Den Ordner danach nicht löschen – der Browser lädt die Erweiterung von dort.</li><li>Erweiterungsseite öffnen: in Chrome <code>chrome://extensions</code>, in Edge <code>edge://extensions</code>.</li><li><em>Entwicklermodus</em> einschalten (Chrome: oben rechts, Edge: links).</li><li><em>Entpackte Erweiterung laden</em> (Edge: <em>Entpackt laden</em>) wählen und den entpackten Ordner auswählen, in dem die Datei <code>manifest.json</code> liegt.</li><li>Optional über das Puzzle-Symbol in der Symbolleiste anheften.</li></ol>
+<p>Voraussetzung: Chrome bzw. Edge ab Version 110. Entpackt geladene Erweiterungen werden nicht automatisch aktualisiert; für eine neue Version den Ordner ersetzen und auf der Erweiterungsseite <em>Neu laden</em> klicken. Firefox wird derzeit nicht unterstützt.</p>
+<h2>Berechtigungen</h2>
+<ul><li><code>declarativeNetRequestWithHostAccess</code> und Zugriff auf alle Websites: Tracking-Parameter aus der Adresse entfernen, bevor die Seite lädt. Seiteninhalte werden nicht gelesen.</li><li><code>storage</code>: Ein/Aus-Schalter, Liste pausierter Seiten und Zähler.</li><li><code>activeTab</code>: Adresse des aktuellen Tabs zum Kopieren lesen, nur nach Klick.</li><li><code>clipboardWrite</code>: sauberen Link in die Zwischenablage schreiben.</li></ul>
+</section>
+<section id="en" lang="en">
+<h1>LinkClean – remove tracking from links</h1>
+<p class="lead">Browser extension for Chrome and Edge: removes tracking parameters such as <code>utm_source</code>, <code>fbclid</code> or <code>gclid</code> from links – locally in your browser.</p>
+<p class="shot"><img src="img/linkclean-en.png" alt="LinkClean popup in dark mode with switch, “Copy clean link” and “Pause on this site”" width="608" height="420" loading="lazy"></p>
+<h2>Features</h2>
+<ul><li><strong>Automatic:</strong> 48 known tracking parameters are removed when a page is requested, before it loads (via Chrome’s built-in declarativeNetRequest API).</li><li><strong>Site-specific:</strong> extra rules for YouTube, Spotify, Amazon, TikTok, X/Twitter, Facebook, Reddit and eBay.</li><li><strong>Copy clean link:</strong> one click copies the current address without tracking. Redirect links from Google, Facebook, Instagram, YouTube, LinkedIn and Reddit are unwrapped so the real destination is shared.</li><li><strong>Pause on this site:</strong> turns automatic cleaning off for a website that needs its parameters. Google, Apple and Microsoft sign-in pages as well as Google Docs and Gmail are skipped by default.</li><li>On/off switch, badge with the number of cleaned links in the current tab, light/dark, English and German.</li></ul>
+<h2>Privacy</h2>
+<p>No account, no analytics, no servers: the extension sends no data. <a href="datenschutz/#en" hreflang="en">LinkClean privacy policy</a></p>
+<h2>Download</h2>
+<p><a href="linkclean-1.0.0.zip" download>Download LinkClean 1.0.0 as ZIP</a> (17 KB)</p>
+<p>SHA-256: <code class="hash">f06a7aba37417ade7b2c387767ebe8308e9dc1d0185e954c381c55686d6c8bd5</code></p>
+<p>Chrome Web Store: listing coming soon.</p>
+<h2>Installing in Chrome or Edge (unpacked extension)</h2>
+<ol><li>Download the ZIP and extract it to a permanent folder (e.g. <code>Documents/LinkClean</code>). Do not delete the folder afterwards – the browser loads the extension from there.</li><li>Open the extensions page: <code>chrome://extensions</code> in Chrome, <code>edge://extensions</code> in Edge.</li><li>Turn on <em>Developer mode</em> (Chrome: top right, Edge: left side).</li><li>Click <em>Load unpacked</em> and select the extracted folder that contains <code>manifest.json</code>.</li><li>Optionally pin it via the puzzle icon in the toolbar.</li></ol>
+<p>Requires Chrome or Edge 110 or later. Unpacked extensions are not updated automatically; for a new version replace the folder and click <em>Reload</em> on the extensions page. Firefox is not supported at the moment.</p>
+<h2>Permissions</h2>
+<ul><li><code>declarativeNetRequestWithHostAccess</code> and access to all sites: remove tracking parameters from the address before the page loads. Page content is not read.</li><li><code>storage</code>: on/off switch, list of paused sites and counter.</li><li><code>activeTab</code>: read the current tab’s address for copying, only after a click.</li><li><code>clipboardWrite</code>: write the clean link to the clipboard.</li></ul>
+</section>
+</main>
+<footer class="site-footer"><nav aria-label="Rechtliches"><ul><li><a href="../">Startseite</a></li><li><a href="../impressum/">Impressum</a></li><li><a href="../datenschutz/">Datenschutz</a></li></ul></nav></footer>
+</body>
+</html>

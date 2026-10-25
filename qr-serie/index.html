@@ -1,0 +1,47 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>QR-Überweisung Serie – QR-Codes für alle Mitglieder auf einmal</title>
+<meta name="description" content="QR-Codes für Überweisungen in Serie erstellen: Aus einer CSV-Liste QR-Überweisungscodes (EPC-QR) für alle Mitglieder, Eltern oder Mieter auf einmal erzeugen – mit eigenem Betrag und Verwendungszweck. Kostenlos, ohne Anmeldung, 100 % lokal im Browser.">
+<meta name="author" content="datvanu"><meta name="publisher" content="datvanu">
+<meta name="keywords" content="QR-Code Überweisung Serie, EPC QR Code, EPC-QR-Code Generator, Überweisungs-QR-Code, QR-Code Überweisung, Mitgliedsbeitrag QR-Code, Verein Beitrag einziehen, QR-Code Überweisung CSV">
+<link rel="canonical" href="https://datvanu.de/qr-serie/"><link rel="icon" href="../img/mark.svg" type="image/svg+xml">
+<meta property="og:type" content="website"><meta property="og:locale" content="de_DE"><meta property="og:title" content="QR-Überweisung Serie – QR-Überweisungscodes für alle auf einmal">
+<meta property="og:description" content="CSV rein, fertige Überweisungs-QR-Codes raus: Mitgliedsbeiträge, Kita-Gelder, Nebenkosten. Kostenlos und datensparsam – alles bleibt auf deinem Gerät.">
+<meta property="og:image" content="https://datvanu.de/qr-serie/img/og-1200x630.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"QR-Überweisung Serie","publisher":{"@type":"Organization","name":"datvanu"},"applicationCategory":"FinanceApplication","operatingSystem":"Browser","inLanguage":"de","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"description":"Erzeugt aus einer CSV-Liste viele EPC-QR-Codes für Überweisungen auf einmal."}</script>
+
+<style>body{font-family:system-ui,sans-serif;margin:0;color:#1d2433;background:#f5f8fb}header{background:#0f2a4a;color:#fff;padding:14px 22px}main{display:grid;grid-template-columns:340px 1fr;gap:18px;padding:18px}
+.panel{background:#fff;border-radius:10px;padding:14px;box-shadow:0 1px 4px #0001}label{display:block;font-size:13px;margin-top:8px}input,textarea{width:100%;box-sizing:border-box;padding:6px;font:inherit}
+textarea{height:130px;font-family:monospace;font-size:12px}button{margin-top:10px;padding:8px 14px;background:#1f6f8b;color:#fff;border:0;border-radius:6px}
+#sheet{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px}.card{background:#fff;border:1px dashed #9ab;border-radius:8px;padding:10px;text-align:center;font-size:12px}.card.err{border-color:#e55;color:#b00}
+.card svg{width:150px;height:150px}.ad{border:1px dashed #ccc;color:#999;text-align:center;padding:16px;font-size:12px;margin-top:12px}
+@media print{header,.panel.form,.ad,button{display:none}main{display:block;padding:0}.card{break-inside:avoid}}.seo{max-width:900px;margin:10px auto;padding:0 18px;line-height:1.5}.seo h1{font-size:22px}.seo h2{font-size:17px}footer{text-align:center;padding:18px;font-size:13px}@media print{.seo,footer{display:none}}</style></head><body>
+<header><a href="../" style="color:#fff">datvanu</a> · <b>QR-Überweisung Serie</b> · QR-Überweisungscodes für Mitgliedsbeiträge &amp; Rechnungen – alles lokal im Browser, keine Daten verlassen dein Gerät</header>
+<main><div class="panel form"><label>Empfänger (Kontoinhaber)<input id="recv" value="TSV Musterstadt e.V."></label><label>IBAN<input id="iban" value="DE89 3704 0044 0532 0130 00"></label>
+<label>Verwendungszweck-Vorlage ({spalte})<input id="tpl" value="Beitrag 2027 {name} Nr. {nr}"></label>
+<label>Liste (CSV mit Spalte „betrag“; ; oder ,)<textarea id="csv">nr;name;betrag
+101;Anna Weber;60,00
+102;Ben Schulz;30,00
+103;Clara Neumann;60,00
+104;David Koch;45,50</textarea></label><button id="go">Codes erzeugen</button> <button onclick="print()">Drucken / PDF</button>
+</div>
+<div><div id="sum" style="margin-bottom:8px"></div><div id="sheet"></div></div></main>
+<section class="seo"><h1>QR-Codes für Überweisungen in Serie erstellen – für Vereine, Kitas und Hausverwaltungen</h1>
+<p>Mit QR-Überweisung Serie erzeugst du aus einer einfachen Tabelle (CSV) für jede Person einen eigenen <b>EPC-QR-Code</b> für die Überweisung mit individuellem Betrag und Verwendungszweck. Die Empfänger scannen den Code mit ihrer Banking-App – IBAN, Betrag und Zweck sind sofort richtig ausgefüllt. Keine Tippfehler, weniger Nachfragen, schnellerer Zahlungseingang.</p>
+<img src="img/hero-1600x900.png" alt="QR-Überweisung Serie im Browser: CSV-Liste links, fertige QR-Code-Karten rechts" width="1600" height="900" loading="lazy" style="width:100%;height:auto;border-radius:8px">
+<h2>So funktioniert's</h2><img src="img/explainer-1440x680.png" alt="Ablauf: CSV einfügen, Codes erzeugen, drucken oder als PDF speichern" width="1440" height="680" loading="lazy" style="width:100%;height:auto"><ol><li>Empfänger und IBAN eintragen (die IBAN wird per Prüfsumme kontrolliert).</li><li>Liste einfügen, z. B. aus Excel exportiert: Spalten wie <code>nr;name;betrag</code>.</li><li>Verwendungszweck-Vorlage festlegen, z. B. <code>Beitrag 2027 {name} Nr. {nr}</code>.</li><li>„Codes erzeugen“ und als Kartenbogen drucken oder als PDF speichern.</li></ol>
+<h2>Sicher und datensparsam</h2><p>Alle Daten bleiben in deinem Browser. Es gibt keinen Upload, kein Konto und keine Speicherung auf einem Server.</p>
+<h2>Häufige Fragen</h2><dl><dt>Was ist ein EPC-QR-Code?</dt><dd>Ein standardisierter QR-Code (EPC069-12) für SEPA-Überweisungen, den nahezu alle deutschen Banking-Apps lesen können.</dd>
+<dt>Wie lang darf der Verwendungszweck sein?</dt><dd>Maximal 140 Zeichen – das Tool warnt, wenn eine Zeile zu lang ist.</dd>
+<dt>Kostet das etwas?</dt><dd>Nein, das Werkzeug ist kostenlos und ohne Anmeldung nutzbar.</dd></dl></section>
+<section class="seo" id="en" lang="en"><h2>In English</h2>
+<p><b>QR-Überweisung Serie</b> (“QR bank transfer series”) turns a CSV list into one <b>EPC QR code</b> (EPC069-12, SEPA credit transfer) per row, each with its own amount and payment reference. Payers scan the code with their banking app and IBAN, amount and reference are filled in.</p>
+<ol><li><i>Empfänger</i> = recipient (account holder), <i>IBAN</i> = recipient IBAN (checked with its checksum).</li><li><i>Verwendungszweck-Vorlage</i> = reference template; <code>{column}</code> is replaced by that column of each row (max. 140 characters).</li><li><i>Liste</i> = CSV with a header row and a column <code>betrag</code> (amount), separated by <code>;</code> or <code>,</code>.</li><li><i>Codes erzeugen</i> creates the codes, <i>Drucken / PDF</i> prints them or saves a PDF.</li></ol>
+<p>Everything runs in your browser: no upload, no account, nothing is stored on a server. Free of charge. <a href="datenschutz/#en" hreflang="en">Privacy policy</a> · <a href="../impressum/">Legal notice (Impressum)</a></p></section>
+<footer>Ein Werkzeug von <a href="../">datvanu</a> · <a href="../impressum/">Impressum</a> · <a href="datenschutz/">Datenschutz</a> · <a href="#en" hreflang="en">English</a></footer>
+
+<script src="qrcode.js"></script><script src="epc.js"></script><script>
+function esc(s){return s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}
+function go(){const rows=EPC.parseCsv(csv.value);let ok=0;sheet.innerHTML=rows.map(r=>{const text=EPC.fillTemplate(tpl.value,r);
+ try{const p=EPC.epcPayload({name:document.getElementById("recv").value,iban:iban.value,amount:r.betrag,text});qrcode.stringToBytes=qrcode.stringToBytesFuncs['UTF-8'];const q=qrcode(0,'M');q.addData(p,'Byte');q.make();ok++;
+ return `<div class="card">${q.createSvgTag({margin:2,scalable:true})}<div><b>${esc(r.name||'')}</b></div><div>${esc(r.betrag||'')} €</div><div>${esc(text)}</div></div>`}
+ catch(e){return `<div class="card err">${esc(r.name||'?')}: ${esc(e.message)}</div>`}}).join('');sum.textContent=`${ok} von ${rows.length} Codes erzeugt`}
+document.getElementById('go').onclick=go;go();</script></body></html>

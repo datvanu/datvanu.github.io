@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>sgopt – Speichersteuerung für Sungrow-Wechselrichter (in Erprobung)</title>
+<meta name="description" content="sgopt: Speichersteuerung für Sungrow-Hybridwechselrichter nach dynamischem Strompreis – in Erprobung.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="../img/mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
+<header class="site-header"><a class="brand" href="../"><img src="../img/mark.svg" alt="" width="32" height="32">datvanu</a></header>
+<main id="inhalt" class="doc">
+<nav><a href="#de" hreflang="de">Deutsch</a><a href="#en" hreflang="en">English</a></nav>
+<section id="de" lang="de">
+<h1>sgopt – Speichersteuerung nach dynamischem Strompreis</h1>
+<p class="notice"><strong>Status: in Erprobung.</strong> sgopt wird derzeit an einer eigenen Anlage getestet. Es gibt noch keinen Download und keine öffentliche Version.</p>
+<p class="lead">sgopt steuert das Ladeverhalten eines Sungrow-Hybridwechselrichters mit Batteriespeicher nach einem wählbaren Ziel, z. B. möglichst geringe Stromkosten bei einem dynamischen Stromtarif.</p>
+<h2>Was es macht</h2>
+<ul><li>Fragt regelmäßig die Strompreise eines dynamischen Tarifs (Tibber) ab und erkennt, wann sich die Preise für die nächsten Stunden ändern. Ohne Änderung wird nichts an den Wechselrichter geschrieben.</li><li>Plant bei einer Änderung den Speichereinsatz für die nächsten 24–48 Stunden, unter Berücksichtigung einer PV-Prognose und des eigenen Verbrauchsprofils, und gibt den jeweils aktuellen Schritt an den Wechselrichter weiter (lokal über Modbus TCP).</li><li>Wählbare Ziele: Stromkosten senken, Netzbezug minimieren, Batterie schonen, Einspeiseerlös oder CO₂-Intensität.</li></ul>
+<h2>Sicherheit</h2>
+<ul><li>Standardmäßig nur Simulation (Dry-Run); geschrieben wird erst nach ausdrücklicher Freigabe.</li><li>Bei Start, Beenden und jedem Fehler Rückfall auf den normalen Eigenverbrauchsmodus des Wechselrichters; ein separater Watchdog setzt ebenfalls zurück, wenn keine Rückmeldung mehr kommt.</li><li>Feste Leistungsgrenze, Ladezustand nur im Bereich 10–95 %, kein Laden bei zu kalter oder zu warmer Batterie oder bei Fehlermeldungen des Batteriemanagements.</li><li>Ohne Preisdaten kein Zwangsladen. Jede Entscheidung wird protokolliert.</li></ul>
+<h2>Gut zu wissen</h2>
+<p>Ein dynamischer Stromtarif setzt in Deutschland ein intelligentes Messsystem oder ein passendes Zählerauslesegerät voraus. Eingriffe in die Betriebsweise von Wechselrichter und Batterie können Garantie oder Gewährleistung berühren und müssen mit den Bedingungen von Netzbetreiber und Stromvertrag vereinbar sein. sgopt steht in keiner Verbindung zu Sungrow oder Tibber; die Namen nennen nur die Kompatibilität.</p>
+</section>
+<section id="en" lang="en">
+<h1>sgopt – battery control based on dynamic electricity prices</h1>
+<p class="notice"><strong>Status: in testing.</strong> sgopt is currently being tested on a private installation. There is no download and no public release yet.</p>
+<p class="lead">sgopt controls how a Sungrow hybrid inverter with battery storage charges, according to a selectable goal – for example the lowest electricity cost on a dynamic tariff.</p>
+<h2>What it does</h2>
+<ul><li>Regularly fetches the prices of a dynamic tariff (Tibber) and detects when prices for the next hours change. Without a change nothing is written to the inverter.</li><li>On a change it plans battery use for the next 24–48 hours, taking a PV forecast and the household load profile into account, and passes the current step to the inverter (locally via Modbus TCP).</li><li>Selectable goals: lower electricity cost, minimise grid import, protect the battery, feed-in revenue or CO₂ intensity.</li></ul>
+<h2>Safety</h2>
+<ul><li>Simulation only (dry run) by default; nothing is written without explicit activation.</li><li>On start, shutdown and any error it falls back to the inverter’s normal self-consumption mode; a separate watchdog also resets it if no heartbeat arrives.</li><li>Fixed power limit, state of charge kept within 10–95 %, no charging when the battery is too cold or too warm or the battery management reports a fault.</li><li>No forced charging without price data. Every decision is logged.</li></ul>
+<h2>Good to know</h2>
+<p>In Germany a dynamic tariff requires a smart metering system or a suitable meter reader. Changing how the inverter and battery operate may affect the manufacturer’s warranty and must comply with the conditions of your grid operator and electricity contract. sgopt is not affiliated with Sungrow or Tibber; the names only describe compatibility.</p>
+</section>
+</main>
+<footer class="site-footer"><nav aria-label="Rechtliches"><ul><li><a href="../">Startseite</a></li><li><a href="../impressum/">Impressum</a></li><li><a href="../datenschutz/">Datenschutz</a></li></ul></nav></footer>
+</body>
+</html>
