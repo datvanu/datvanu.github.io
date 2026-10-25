@@ -30,6 +30,8 @@ mark{background:var(--mark);color:var(--mark-fg);padding:0 .2em}
 .doc nav a{font-weight:600;text-decoration:none;border:2px solid var(--link);border-radius:999px;padding:.15rem .9rem}
 .doc section+section{border-top:1px solid var(--line);margin-top:3rem}
 .doc footer{color:var(--muted);font-size:.9rem;margin-top:3rem}
+.doc table{border-collapse:collapse;width:100%;font-size:.95rem;margin:.75rem 0}
+.doc th,.doc td{text-align:left;vertical-align:top;border-bottom:1px solid var(--line);padding:.4rem .6rem .4rem 0}
 .site-footer{border-top:1px solid var(--line);padding-top:1rem;padding-bottom:2rem;color:var(--muted);font-size:.95rem}
 .site-footer ul{list-style:none;padding:0;margin:0;display:flex;gap:1.25rem;flex-wrap:wrap}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
