@@ -42,3 +42,8 @@ mark{background:var(--mark);color:var(--mark-fg);padding:0 .2em}
 .notice+.lead{margin-top:1rem}
 .button{display:inline-block;background:var(--link);color:var(--bg);font-weight:600;padding:.6em 1.1em;border-radius:8px;text-decoration:none}
 .button:hover{filter:brightness(1.08)}
+.support{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--link);border-radius:10px;padding:.4rem 1.2rem 1rem;margin:1rem 0 2rem}
+.support h3{font-size:1.05rem;margin:1.1rem 0 .3rem}
+.support li{margin:.25rem 0}
+.jump{font-weight:600}
+.muted{color:var(--muted)}
