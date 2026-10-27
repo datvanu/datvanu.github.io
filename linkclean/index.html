@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>LinkClean – Tracking aus Links entfernen</title>
-<meta name="description" content="LinkClean: Browser-Erweiterung, die Tracking-Parameter aus Links entfernt – lokal im Browser.">
+<meta name="description" content="LinkClean für Chrome und Edge: entfernt utm_, fbclid und Co. aus Links, bevor die Seite lädt. Saubere Links kopieren, je Seite pausieren. Lokal, ohne Konto.">
 <meta name="color-scheme" content="light dark">
 <link rel="icon" href="../img/mark.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../style.css">
@@ -16,17 +16,31 @@
 <nav><a href="#de" hreflang="de">Deutsch</a><a href="#en" hreflang="en">English</a></nav>
 <section id="de" lang="de">
 <h1>LinkClean – Tracking aus Links entfernen</h1>
-<p class="lead">Browser-Erweiterung für Chrome und Edge: entfernt Tracking-Parameter wie <code>utm_source</code>, <code>fbclid</code> oder <code>gclid</code> aus Links – lokal im Browser.</p>
-<p class="jump"><a href="#download">Download</a> · <a href="#support">Hilfe &amp; Support</a></p>
+<p class="lead"><strong>Für Chrome und Edge.</strong> LinkClean entfernt Tracking-Parameter wie <code>utm_source</code>, <code>fbclid</code> oder <code>gclid</code>, bevor die Seite lädt, und kopiert dir saubere Links mit dem echten Ziel. Alles lokal im Browser, ohne Konto und ohne Server.</p>
+<p class="jump">Chrome Web Store: Eintrag folgt · <a href="#download">ZIP herunterladen</a> · <a href="#support">Hilfe &amp; Support</a></p>
 <p class="shot"><img src="img/linkclean-de.png" alt="Popup von LinkClean mit Schalter, „Sauberen Link kopieren“ und „Auf dieser Seite pausieren“" width="608" height="454" loading="lazy"></p>
-<h2>Funktionen</h2>
+<h2>Warum?</h2>
+<p>Ein geteilter Link wie <code>…/artikel?utm_source=newsletter&amp;utm_campaign=herbst&amp;fbclid=IwAR…</code> verrät, woher du kommst, und oft auch, wer ihn geteilt hat. Für den Inhalt braucht es diese Anhängsel nicht. LinkClean schneidet sie ab.</p>
+<h2>Was LinkClean macht</h2>
 <ul><li><strong>Automatisch:</strong> 48 bekannte Tracking-Parameter werden beim Aufruf einer Seite entfernt, bevor sie lädt (über die in Chrome eingebaute Schnittstelle declarativeNetRequest).</li><li><strong>Seitenspezifisch:</strong> zusätzliche Regeln für YouTube, Spotify, Amazon, TikTok, X/Twitter, Facebook, Reddit und eBay.</li><li><strong>Sauberen Link kopieren:</strong> ein Klick kopiert die aktuelle Adresse ohne Tracking. Weiterleitungslinks von Google, Facebook, Instagram, YouTube, LinkedIn und Reddit werden dabei entpackt, sodass das echte Ziel geteilt wird.</li><li><strong>Auf dieser Seite pausieren:</strong> schaltet die automatische Bereinigung für eine Website ab, falls sie ihre Parameter braucht. Anmeldeseiten von Google, Apple und Microsoft sowie Google Docs und Gmail sind standardmäßig ausgenommen.</li><li>Ein/Aus-Schalter, Zähler im Symbol für bereinigte Links im aktuellen Tab, hell/dunkel, Deutsch und Englisch.</li></ul>
+<h2>Du kommst von ClearURLs?</h2>
+<p>ClearURLs ist für Manifest V2 gebaut; Chrome und Edge schalten solche Erweiterungen ab. ClearURLs ist im Chrome Web Store derzeit nicht mehr verfügbar (Stand Oktober 2026). LinkClean ist eine kleine, unabhängige Alternative nach den aktuellen Regeln für Chrome-Erweiterungen (Manifest V3). Wir haben beide mit denselben echten Links getestet. Ehrlich zusammengefasst:</p>
+<table><tr><th scope="col"></th><th scope="col">LinkClean</th><th scope="col">ClearURLs</th></tr><tr><th scope="row">Gebaut für</th><td>Manifest V3 (aktuelle Chrome-Plattform)</td><td>Manifest V2, wird in Chrome und Edge abgeschaltet</td></tr><tr><th scope="row">Im Chrome Web Store</th><td>Eintrag folgt</td><td>nicht mehr verfügbar (Stand 10/2026)</td></tr><tr><th scope="row">Läuft in Firefox</th><td>noch nicht</td><td>ja</td></tr><tr><th scope="row">Umfang der Regeln</th><td>48 Parameter + Regeln für 8 Websites</td><td>206 Anbieter-Regeln, <strong>deutlich mehr</strong></td></tr><tr><th scope="row">Weiterleitungen beim <strong>Anklicken</strong> entpacken</th><td>nein (Grenze von Manifest V3)</td><td>ja (7 von 8 im Test)</td></tr><tr><th scope="row">Weiterleitungen beim <strong>Kopieren</strong> entpacken</th><td>ja (8 von 8 im Test)</td><td>–</td></tr><tr><th scope="row">Pause je Website</th><td>ja</td><td>nein</td></tr><tr><th scope="row">Netzwerkanfragen</th><td>keine, Regeln fest eingebaut</td><td>aktualisiert seine Regelliste aus dem Netz</td></tr></table>
+<p>ClearURLs aktualisiert seine Regelliste aus dem Netz, LinkClean bringt seine Regeln fest mit und macht keine Netzwerkanfragen.</p>
+<p>Kurz: ClearURLs kennt deutlich mehr Tracker und läuft in Firefox. LinkClean läuft in Chrome und Edge und lässt sich je Website pausieren.</p>
+<h2>Brauchst du LinkClean überhaupt?</h2>
+<p>Vielleicht nicht, und das sagen wir lieber vorher:</p>
+<ul><li><strong>Brave</strong> entfernt viele Tracking-Parameter schon selbst und kann saubere Links kopieren.</li><li><strong>Firefox</strong> entfernt im Schutzmodus „Streng“ einige Parameter und hat „Link ohne Website-Tracking kopieren“.</li><li><strong>Werbeblocker wie uBlock Origin Lite</strong> können mit passenden Filterlisten ebenfalls Tracking-Parameter entfernen.</li></ul>
+<p>LinkClean ist für dich, wenn du Chrome oder Edge nutzt, oft Links teilst und eine kleine Lösung willst, die ohne Einrichtung funktioniert.</p>
 <h2>Datenschutz</h2>
-<p>Kein Konto, keine Statistik, keine Server: Die Erweiterung sendet keine Daten. <a href="datenschutz/">Datenschutzerklärung LinkClean</a></p>
+<p>Kein Konto, keine Statistik, keine Server: LinkClean stellt keine Netzwerkanfragen und sendet keine Daten. <a href="datenschutz/">Datenschutzerklärung LinkClean</a></p>
+<h2>Ehrliche Grenzen</h2>
+<ul><li>Weiterleitungslinks werden beim Kopieren entpackt, nicht beim Anklicken.</li><li>Links auf einer Seite werden nicht umgeschrieben, sondern beim Öffnen bereinigt.</li><li>LinkClean ist kein Werbeblocker.</li></ul>
 <h2 id="download">Download</h2>
 <p><a href="linkclean-1.0.0.zip" download>LinkClean 1.0.0 als ZIP herunterladen</a> (16 KB)</p>
 <p>SHA-256: <code class="hash">5c35c8a03b7cd7ef3d6431913fb30fdef9ba74ab60d8c2c15abe8c6e083650e9</code></p>
 <p>Chrome Web Store: Eintrag folgt.</p>
+<p>Edge Add-ons: Eintrag in Vorbereitung. Bis dahin funktioniert das ZIP (Anleitung unten).</p>
 <h2>Installation in Chrome oder Edge (entpackte Erweiterung)</h2>
 <ol><li>ZIP herunterladen und in einen dauerhaften Ordner entpacken (z. B. <code>Dokumente/LinkClean</code>). Den Ordner danach nicht löschen – der Browser lädt die Erweiterung von dort.</li><li>Erweiterungsseite öffnen: in Chrome <code>chrome://extensions</code>, in Edge <code>edge://extensions</code>.</li><li><em>Entwicklermodus</em> einschalten (Chrome: oben rechts, Edge: links).</li><li><em>Entpackte Erweiterung laden</em> (Edge: <em>Entpackt laden</em>) wählen und den entpackten Ordner auswählen, in dem die Datei <code>manifest.json</code> liegt.</li><li>Optional über das Puzzle-Symbol in der Symbolleiste anheften.</li></ol>
 <p>Voraussetzung: Chrome bzw. Edge ab Version 110. Entpackt geladene Erweiterungen werden nicht automatisch aktualisiert; für eine neue Version den Ordner ersetzen und auf der Erweiterungsseite <em>Neu laden</em> klicken. Firefox wird derzeit nicht unterstützt.</p>
@@ -49,17 +63,31 @@
 </section>
 <section id="en" lang="en">
 <h1>LinkClean – remove tracking from links</h1>
-<p class="lead">Browser extension for Chrome and Edge: removes tracking parameters such as <code>utm_source</code>, <code>fbclid</code> or <code>gclid</code> from links – locally in your browser.</p>
-<p class="jump"><a href="#download-en">Download</a> · <a href="#support-en">Help &amp; support</a></p>
+<p class="lead"><strong>For Chrome and Edge.</strong> LinkClean removes tracking parameters like <code>utm_source</code>, <code>fbclid</code> or <code>gclid</code> before the page loads, and copies clean links with the real destination. Everything runs locally in your browser, with no account and no servers.</p>
+<p class="jump">Chrome Web Store: listing coming soon · <a href="#download-en">Download ZIP</a> · <a href="#support-en">Help &amp; support</a></p>
 <p class="shot"><img src="img/linkclean-en.png" alt="LinkClean popup in dark mode with switch, “Copy clean link” and “Pause on this site”" width="608" height="420" loading="lazy"></p>
-<h2>Features</h2>
+<h2>Why?</h2>
+<p>A shared link like <code>…/article?utm_source=newsletter&amp;utm_campaign=autumn&amp;fbclid=IwAR…</code> tells sites where you came from, and often who shared it. The content doesn’t need any of that. LinkClean cuts it off.</p>
+<h2>What LinkClean does</h2>
 <ul><li><strong>Automatic:</strong> 48 known tracking parameters are removed when a page is requested, before it loads (via Chrome’s built-in declarativeNetRequest API).</li><li><strong>Site-specific:</strong> extra rules for YouTube, Spotify, Amazon, TikTok, X/Twitter, Facebook, Reddit and eBay.</li><li><strong>Copy clean link:</strong> one click copies the current address without tracking. Redirect links from Google, Facebook, Instagram, YouTube, LinkedIn and Reddit are unwrapped so the real destination is shared.</li><li><strong>Pause on this site:</strong> turns automatic cleaning off for a website that needs its parameters. Google, Apple and Microsoft sign-in pages as well as Google Docs and Gmail are skipped by default.</li><li>On/off switch, badge with the number of cleaned links in the current tab, light/dark, English and German.</li></ul>
+<h2>Coming from ClearURLs?</h2>
+<p>ClearURLs is built for Manifest V2; Chrome and Edge are switching such extensions off. ClearURLs is currently no longer available in the Chrome Web Store (as of October 2026). LinkClean is a small, independent alternative built for the current Chrome extension platform (Manifest V3). We tested both with the same real-world links. Honest summary:</p>
+<table><tr><th scope="col"></th><th scope="col">LinkClean</th><th scope="col">ClearURLs</th></tr><tr><th scope="row">Built for</th><td>Manifest V3 (current Chrome platform)</td><td>Manifest V2, being switched off in Chrome and Edge</td></tr><tr><th scope="row">In the Chrome Web Store</th><td>listing coming soon</td><td>no longer available (as of 10/2026)</td></tr><tr><th scope="row">Runs in Firefox</th><td>not yet</td><td>yes</td></tr><tr><th scope="row">Rule coverage</th><td>48 parameters + rules for 8 websites</td><td>206 provider rules, <strong>much more</strong></td></tr><tr><th scope="row">Unwraps redirects when <strong>clicking</strong></th><td>no (Manifest V3 limit)</td><td>yes (7 of 8 in our test)</td></tr><tr><th scope="row">Unwraps redirects when <strong>copying</strong></th><td>yes (8 of 8 in our test)</td><td>–</td></tr><tr><th scope="row">Pause per site</th><td>yes</td><td>no</td></tr><tr><th scope="row">Network requests</th><td>none, rules built in</td><td>updates its rule list from the internet</td></tr></table>
+<p>ClearURLs updates its rule list from the internet; LinkClean ships its rules built in and makes no network requests.</p>
+<p>In short: ClearURLs knows many more trackers and runs in Firefox. LinkClean runs in Chrome and Edge and can be paused per site.</p>
+<h2>Do you even need LinkClean?</h2>
+<p>Maybe not, and we’d rather tell you up front:</p>
+<ul><li><strong>Brave</strong> already strips many tracking parameters and can copy clean links.</li><li><strong>Firefox</strong> removes some parameters in “Strict” tracking protection and has “Copy Link Without Site Tracking”.</li><li><strong>Ad blockers such as uBlock Origin Lite</strong> can also remove tracking parameters with the right filter lists.</li></ul>
+<p>LinkClean is for you if you use Chrome or Edge, share links a lot, and want a small tool that works without setup.</p>
 <h2>Privacy</h2>
-<p>No account, no analytics, no servers: the extension sends no data. <a href="datenschutz/#en" hreflang="en">LinkClean privacy policy</a></p>
+<p>No account, no analytics, no servers: LinkClean makes no network requests and sends no data. <a href="datenschutz/#en" hreflang="en">LinkClean privacy policy</a></p>
+<h2>Honest limits</h2>
+<ul><li>Redirect links are unwrapped when you copy them, not when you click them.</li><li>Links on a page are not rewritten in place; they are cleaned when you open them.</li><li>LinkClean is not an ad blocker.</li></ul>
 <h2 id="download-en">Download</h2>
 <p><a href="linkclean-1.0.0.zip" download>Download LinkClean 1.0.0 as ZIP</a> (16 KB)</p>
 <p>SHA-256: <code class="hash">5c35c8a03b7cd7ef3d6431913fb30fdef9ba74ab60d8c2c15abe8c6e083650e9</code></p>
 <p>Chrome Web Store: listing coming soon.</p>
+<p>Edge Add-ons: listing in preparation. Until then, use the ZIP (instructions below).</p>
 <h2>Installing in Chrome or Edge (unpacked extension)</h2>
 <ol><li>Download the ZIP and extract it to a permanent folder (e.g. <code>Documents/LinkClean</code>). Do not delete the folder afterwards – the browser loads the extension from there.</li><li>Open the extensions page: <code>chrome://extensions</code> in Chrome, <code>edge://extensions</code> in Edge.</li><li>Turn on <em>Developer mode</em> (Chrome: top right, Edge: left side).</li><li>Click <em>Load unpacked</em> and select the extracted folder that contains <code>manifest.json</code>.</li><li>Optionally pin it via the puzzle icon in the toolbar.</li></ol>
 <p>Requires Chrome or Edge 110 or later. Unpacked extensions are not updated automatically; for a new version replace the folder and click <em>Reload</em> on the extensions page. Firefox is not supported at the moment.</p>
